@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylessheet" href="gallery.css">
+
+    <title>Mila Landrover</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="navbar-logo">Mila</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="#" class="nav-links">Services</a></li>
+                <li><a href="#" class="nav-links">About Us</a></li>
+                <li><a href="#" class="nav-links">Contact Us</a></li>
+                <li><a href="#" class="nav-links nav-links-btn" id="signupBtn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Hero Section -->
+    <div class="main-container">
+        <div class="main-content">
+            <h1>MILA LANDROVER</h1>
+
+<p>
+    🇿🇼 Harare's trusted specialists for Land Rover & premium vehicles.<br>
+    Advanced diagnostics • Genuine parts • Expert workmanship.<br>
+    Drive in today we keep you moving with confidence.
+</p>
+
+            
+            <button class="main-btn" id="getStartedBtn">Get Started</button>
+        </div>
+        <div class="main-img-container">
+            <img src="images/hybrid.jpeg" alt="" id="main-img">
+        </div>
+    </div>
+
+    
+
+    <!-- MODAL - Added just before closing body -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Create Your Account</h2>
+                <p>Get started with us today! Fill in your details below.</p>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password">
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">SIGN UP</button>
+                </form>
+                <p class="login-link">Already have an account? <a href="#">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- image Gallery -->
+<div class="services-section">
+  <div class="services-heading">
+    <h1>Check out Mila Autotech services below!</h1>
+  </div>
+
+  <div class="services">
+    <!-- cell 1 -->
+    <div class="services-cell">
+      <img src="images/beast.jpg" alt="Routine Maintenance" class="services-cell_img">
+      <div class="services-cell_text">Routine Maintenance</div>
+    </div>
+    <!-- cell 2 -->
+    <div class="services-cell">
+      <img src="images/inside.jpg" alt="Engine Repairs" class="services-cell_img">
+      <div class="services-cell_text">Engine Repairs</div>
+    </div>
+    <!-- cell 3 -->
+    <div class="services-cell">
+      <img src="images/wheels.jpg" alt="Transmission Services" class="services-cell_img">
+      <div class="services-cell_text">Transmission Services</div>
+    </div>
+    <!-- cell 4 -->
+    <div class="services-cell">
+      <img src="images/oil.jpg" alt="Brake Services" class="services-cell_img">
+      <div class="services-cell_text">Brake Services</div>
+    </div>
+    <!-- cell 5 -->
+    <div class="services-cell">
+      <img src="images/interior.jpg" alt="Electrical and Electronics" class="services-cell_img">
+      <div class="services-cell_text">Electrical and Electronics</div>
+    </div>
+    <!-- cell 6 -->
+    <div class="services-cell">
+      <img src="images/buffing.jpg" alt="Body and Paint" class="services-cell_img">
+      <div class="services-cell_text">Body and Paint</div>
+    </div>
+    <!-- cell 7 -->
+    <div class="services-cell">
+      <img src="images/diagnostic.jpg" alt="Diagnostic Services" class="services-cell_img">
+      <div class="services-cell_text">Diagnostic Services</div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- ===== CORRECTED CONTACT US SECTION ===== -->
+    <div class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Follow us on Facebook for updates and offers, or chat with us directly on WhatsApp!</p>
+            <div class="social-icons">
+                <!-- SINGLE FACEBOOK ICON (your correct profile URL) -->
+                <a href="https://facebook.com/profile.php?id=61575615114430" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>  <!-- Font Awesome 6 brand icon -->
+                </a>
+                <!-- You can add more social icons here (Instagram, Twitter, etc.) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CORRECTED FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/263773147820?text=Hello%20Mila%20Landrover!%20I%20need%20assistance%20with%20my%20vehicle." 
+       class="whatsapp-float"
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Chat with us on WhatsApp"
+       aria-label="WhatsApp chat">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== YOUR EXISTING SCRIPTS ===== -->
+    <script src="app.js"></script>
+
+<!-- ===== LOCATION SECTION WITH GOOGLE MAPS ===== -->
+<div class="location-section">
+    <div class="location-container">
+        <div class="location-header">
+            <h2>Visit Our Workshop</h2>
+            <p class="location-address">
+                <i class="fa-solid fa-location-dot"></i> 
+                939 Christ Church Avenue, Strathaven, Harare, Zimbabwe
+            </p>
+            <p class="location-hours">
+                <i class="fa-solid fa-clock"></i>
+                Monday – Friday: 8:00 AM – 5:00 PM | Saturday: 8:00 AM – 1:00 PM
+            </p>
+        </div>
+        
+      <div class="map-container">
+    <!-- Google Maps embed for 939 Christ Church Avenue, Harare -->
+    <iframe 
+        src="https://www.google.com/maps?q=939+Christ+Church+Avenue+Harare+Zimbabwe&output=embed"
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mila Autotech location at 939 Christ Church Avenue, Harare"
+        aria-label="Google Map showing Mila Autotech workshop location">
+    </iframe>
+</div>
+        
+        <div class="location-footer">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=14+De+Noon+Road,+Avondale,+Harare,+Zimbabwe" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="directions-btn">
+                <i class="fa-solid fa-map-pin"></i>
+                Get Directions
+            </a>
+            <a href="tel:+263773147820" class="call-btn">
+                <i class="fa-solid fa-phone"></i>
+                Call Us
+            </a>
+        </div>
+    </div>
+</div>
+<!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Row 1: Main footer content (columns) -->
+        <div class="footer-row">
+            <!-- Column 1: Brand & About -->
+            <div class="footer-col">
+                <h3 class="footer-title">Mila Landrover</h3>
+                <p class="footer-about">
+                    Your trusted partner for Land Rover and premium vehicle repair and maintenance in Harare. Quality service, genuine care.
+                </p>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>939 Christ Church Avenue, Strathaven, Harare, Zimbabwe</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+263 77 314 7820</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@milalandrover.co.zw</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Sign Up</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="footer-col">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Routine Maintenance</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Engine Repairs</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Transmission Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Brake Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Electrical & Electronics</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Body & Paint</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Diagnostic Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Opening Hours & Social -->
+            <div class="footer-col">
+                <h3 class="footer-title">Opening Hours</h3>
+                <div class="footer-hours">
+                    <p><i class="fa-regular fa-calendar"></i> Mon – Fri: 8:00 AM – 5:00 PM</p>
+                    <p><i class="fa-regular fa-calendar"></i> Sat: 8:00 AM – 1:00 PM</p>
+                    <p><i class="fa-regular fa-calendar"></i> Sun: Closed</p>
+                </div>
+                <div class="footer-social">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/profile.php?id=61575615114430" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/263773147820?text=Hello%20Mila%20Landrover!%20I%20need%20assistance%20with%20my%20vehicle." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <!-- Add more social icons here if needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Copyright / Bottom bar -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mila Landrover. All rights reserved. | Designed with <i class="fa-solid fa-heart" style="color: var(--green);"></i> by Rtech</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

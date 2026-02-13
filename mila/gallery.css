@@ -1,0 +1,192 @@
+:root {
+  --darkblack: #0b0c0b;
+  --darkgreen: #057a2c;
+  --white: #fff;
+  --lightgreen: #0be07dcc;
+  --lightbluey: #0be0d6cc;
+  --lightlemon: #48e00bcc;
+}
+
+.services-section {
+  background-color: var(--darkgreen);
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 8rem;
+}
+
+.services-heading {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+/* gallery container – flexbox */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  transform: translateY(80px);
+}
+
+/* hexagon cell */
+.services-cell {
+  flex: 0 1 250px;
+  max-width: 250px;
+  height: 275px;
+  margin: 10px;
+  position: relative;   /* required for top/left shifts & absolute children */
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.8);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  cursor: pointer;
+  overflow: hidden;     /* ensures nothing spills outside hexagon */
+}
+
+/* image – now fully covers the hexagon */
+.services-cell_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* text overlay */
+.services-cell_text {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  text-shadow: 2px 2px 2px var(--darkblack);
+  z-index: 2;
+  transition: opacity 350ms;
+}
+
+/* shine effect (fixed) */
+.services-cell::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 350px;
+  height: 70px;
+  background: var(--white);
+  opacity: 0.4;
+  transform: rotate(45deg);
+  transition: transform 1.5s;
+  z-index: 3;
+}
+
+.services-cell:hover::before {
+  transform: translate(100px, 400%) rotate(45deg);
+  transition: transform 0.8s;
+}
+
+/* hover scale effect */
+.services-cell:hover {
+  transform: scale(1.1);
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ========== RESPONSIVE ========== */
+/* Tablet – honeycomb arrangement */
+@media screen and (min-width: 550px) and (max-width: 825px) {
+  .services-cell {
+    margin: 5px;
+  }
+  /* shift every 3rd cell to create staggered rows */
+  .services-cell:nth-child(3n) {
+    margin-left: calc(50% - 125px);
+    margin-right: calc(50% - 125px);
+  }
+  .services-cell:nth-child(3),
+  .services-cell:nth-child(4),
+  .services-cell:nth-child(5),
+  .services-cell:nth-child(6),
+  .services-cell:nth-child(7) {
+    position: relative;
+  }
+  .services-cell:nth-child(3) {
+    top: -70px;
+  }
+  .services-cell:nth-child(4),
+  .services-cell:nth-child(5) {
+    top: -70px;
+  }
+  .services-cell:nth-child(6) {
+    top: -140px;
+  }
+  .services-cell:nth-child(7) {
+    top: -140px;
+    margin-right: 250px;
+  }
+}
+
+/* Small desktop / large tablet */
+@media screen and (min-width: 825px) and (max-width: 1100px) {
+  .services-cell {
+    margin: 5px;
+  }
+  .services-cell:nth-child(4),
+  .services-cell:nth-child(5),
+  .services-cell:nth-child(6),
+  .services-cell:nth-child(7) {
+    position: relative;
+  }
+  .services-cell:nth-child(4) {
+    top: -70px;
+    margin-left: calc(50% - 275px);
+  }
+  .services-cell:nth-child(5) {
+    top: -70px;
+    margin-right: calc(50% - 275px);
+  }
+  .services-cell:nth-child(6) {
+    top: -140px;
+    margin-left: calc(50% - 530px);
+  }
+  .services-cell:nth-child(7) {
+    top: -140px;
+    margin-right: calc(50% - 275px);
+  }
+}
+
+/* Desktop – shift last two rows up */
+@media screen and (min-width: 1100px) {
+  .services-cell:nth-child(n + 5) {
+    position: relative;
+    top: -70px;
+  }
+}
+
+/* Mobile – simple stacked layout */
+@media screen and (max-width: 550px) {
+  .services {
+    transform: translateY(40px);
+  }
+  .services-cell {
+    flex: 0 1 200px;
+    max-width: 200px;
+    height: 220px;
+    margin: 30px 15px;
+  }
+  .services-cell_text {
+    font-size: 0.85rem;
+  }
+}
